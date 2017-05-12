@@ -59,7 +59,7 @@ its generated files, so you can do the following
 $ yarn global add @angular/cli            # Install angular CLI
 
 $ ng g module new-module                  # Generate a new module (might not need this)
-$ ng g component new-comp                 # Generate a new component (this will be useful)
+$ ng g component new-module/new-comp      # Generate a new component (this will be useful)
 ```
 
 ## Help
