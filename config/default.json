@@ -1,0 +1,44 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "29df8e00b9e24fa2276ecaa4301d843fd0e3ece185b83f6d29d0fd083302831df262e9a5e223742022773e85fcd3e26cf8bb72d4dc350df03af46cac0fef961bd4ad6768c4893c02b7e5e0465c08ec7ca8a6f47958c216ef253d16aa2855a242a3f2733da78c7f1ece9de62fb860c1a028096498f5b963fb8ab93a413650dee3e5dd6498df85279cb741548c7a3c1759b91ac7dcd274546aaccc8de0a14f0077d1ea0ae31a953f7e100eb7ba2e062e32f0a6262673ff848269004ac9ac97bfbe7f6136ac18bfb463dbdc863ac127b1f7dc8cb6fa77293a8768743b706074cb865fc5471336577de600c87bfa2cd788d6dde3acb5fe8cffdb3b388a3a37c0bc8a",
+    "strategies": [
+      "local",
+      "jwt",
+      "cookie" // ??? I have the cookie property..? Do I need this?
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "localhost", // TODO probably need to programatically get this...?
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "users",
+      "service": "users",
+      "usernameField": "username",
+      "passwordField": "password"
+    },
+    "cookie": {
+      "enabled": true,
+      "domain": "localhost",
+      "name": "feathers-jwt",
+      "httpOnly": true,
+      "secure": false // TODO make sure this is true in prod
+    }
+  },
+  "managedAuth": { },
+  "db-connection-string": "mysql://newhotnessapp:b52b901fc67110be30a58c47f4ab288d@localhost:3306/newhotness"
+}
