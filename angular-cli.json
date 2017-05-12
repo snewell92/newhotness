@@ -1,0 +1,8 @@
+{
+    "apps": [
+        {
+            "name": "frontend",
+            "root": "public/src"
+        }
+    ]
+}
