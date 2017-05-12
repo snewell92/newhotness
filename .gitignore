@@ -110,3 +110,6 @@ $RECYCLE.BIN/
 # Others
 lib/
 data/
+
+# output for angular compile
+public/src/app/dist/**/*
