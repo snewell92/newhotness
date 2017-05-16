@@ -28,7 +28,7 @@
     "local": {
       "entity": "users",
       "service": "users",
-      "usernameField": "username",
+      "usernameField": "\\username", // feathers also looks at env vars, the \\ escapes it so we get normal field names
       "passwordField": "password"
     },
     "cookie": {
